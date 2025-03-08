@@ -8,52 +8,96 @@
         body {
             line-height: 1.6;
             font-family: Arial, sans-serif;
+            background-color: #808080;
+            color: #333;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-            font-size: 18px;
+            font-size: 20px;
         }
         header {
-            background-color: #000000;
+            background: url(https://github.com/CBP1012/JOWO-2025-PHASES/blob/main/Images/tree-of-knowledge-edmund-nagele.jpg?raw=true) no-repeat center center;
+            
             color: white;
-            padding: 20px;
+            padding: 60px 20px;
             text-align: center;
+        }
+        .nav-bar {
+            display: flex;
+            justify-content: center;
+            background: #000105;
+            padding: 15px 0;
+        }
+        .nav-bar a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            margin: 0 10px;
+            font-size: 18px;
+            transition: background 0.3s;
+        }
+        .nav-bar a:hover {
+            background: #2c3e50;
+            border-radius: 5px;
         }
         .container {
             width: 80%;
-            margin: auto;
-            overflow: hidden;
-            background: white;
+            margin: 30px auto;
             padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
-        ul {
-            list-style-type: square;
-            padding-left: 20px;
-        }
-        footer {
+        .head {
+            margin: 30px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
             text-align: center;
-            padding: 10px;
-            background-color: #2c3e50;
-            color: white;
-            margin-top: 20px;
+        }
+        .section-title {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #2c3e50;
+            border-bottom: 2px solid #2c3e50;
+            padding-bottom: 5px;
+        }
+        .important-dates, .organizing-committee, .submission-guidelines, .topics-of-interest {
+            margin-bottom: 20px;
+        }
+        .important-dates li, .organizing-committee li, .topics-of-interest li {
+            font-size: 20px;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>2nd Annual Workshop on the Convergence of Large Language Models and Ontologies</h1>
-        <h2><a href="https://www.dmi.unict.it/fois2025/">15th International Conference on Formal Ontology in Information Systems (FOIS 2024)</a></h2>
+
+<header> 
+
+</header>
+
+<nav class="nav-bar">
+        <a href="https://cbp1012.github.io/JOWO-2025-PHASES/">About</a>
+        <a href="https://cbp1012.github.io/JOWO-2025-PHASES/OrganizingCommittee">Organizing Committee</a>
+        <a href="https://cbp1012.github.io/JOWO-2025-PHASES/Program">Program</a>
+</nav>
+
+<div class="container">
+
+    <div class="head">
+    <section>
+        <h2>2nd Annual Workshop on the Convergence of Large Language Models and Ontologies</h2>
+        <p><a href="https://www.dmi.unict.it/fois2025/">15th International Conference on Formal Ontology in Information Systems (FOIS 2024)</a></p>
         <p><a href="https://www.dmi.unict.it/fois2025/?page_id=28">08-12 September 2025 | Catania, Sicily</a></p>
-    </header>
-    <div class="container">
-        <h2>Workshop Overview</h2>
+    </section>
+    </div>
+
+    <section>
+        <h2 class="section-title">Workshop Overview</h2>
         <p>The rapid development and deployment of Large-Language Models (LLMs) has led to growing interest in leveraging ontologies and knowledge graphs to enhance LLM capabilities and address limitations. Combining the semantically rich architectures provided by ontologies and knowledge graphs with the generative strengths of LLMs promises to provide a path towards more explainable artificial intelligence systems, more trustworthy output, and a deeper understanding of vulnerabilities arising from integrated architectures. This workshop is dedicated to exploring the convergence of knowledge representation and LLM strategies, design patterns, models, and benchmarks. We aim to bring together researchers, practitioners, and enthusiasts from industry, academia, and government in the interest of exploring possible convergence points and advancing each field.
 
             We invite submissions for our workshop focusing on the intersection of Applied Ontology and Large Language Models as part of Joint Ontologies Workshop (JOWO) episode XI, affiliated with FOIS 2025.</p>
         
-        <h2>Topics of Interest</h2>
+        <h2 class="section-title">Topics of Interest</h2>
         <ul>
             <li>Integration of ontological principles in LLM design</li>
             <li>Use of LLMs in ontology generation and refinement</li>
@@ -67,7 +111,7 @@
             <li>Ethical considerations in the intersection of ontologies and LLMs</li>
         </ul>
         
-        <h2>Organizing Committee</h2>
+        <h2 class="section-title">Organizing Committee</h2>
         <ul>
             <li><a href="https://johnbeverley.com/">John Beverley</a>, University at Buffalo; Assistant Professor Department of Philosophy</li>
             <li><a href="https://medicine.buffalo.edu/faculty/profile.html?ubit=elkinp">Peter Elkin</a>, University at Buffalo; Chair of the Department of Biomedical Informatics</li>
@@ -76,7 +120,7 @@
             <li>Ken Archer, Microsoft</li>
         </ul>
         
-        <h2>Important Dates</h2>
+        <h2 class="section-title">Important Dates</h2>
         <ul>
             <li>Submission Deadline: 1 June 2025</li>
             <li>Notification of Acceptance: 14 July 2025</li>
@@ -84,10 +128,10 @@
             <li>Workshop Date: between 8-9 September 2025</li>
         </ul>
         
-        <h2>Talk Structure</h2>
+        <h2 class="section-title">Talk Structure</h2>
         <p>30 minutes for each talk (20m presentation + 10m Q&A)</p>
         
-        <h2>Submission Guidelines</h2>
+        <h2 class="section-title">Submission Guidelines</h2>
         <p>We encourage two types of contributions:</p>
         <ul>
             <li><strong>Full research paper:</strong> Submitted papers must not exceed 14 pages (excluding the bibliography) and must include an abstract of no more than 250 words. The minimum length is 10 pages.</li>
@@ -108,8 +152,8 @@
 
         </ul>
         
-        <h2>Contact</h2>
+        <h2 class="section-title">Contact</h2>
         <p>For inquiries, email: <a href="mailto:johnbeve@buffalo.edu">johnbeve@buffalo.edu</a></p>
-    </div>
+    </section>
 </body>
 </html>
