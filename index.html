@@ -5,110 +5,211 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2nd Annual Workshop on LLMs and Ontologies</title>
     <style>
+        :root {
+          --color-bg: #f5f7fa;
+          --color-primary: #2c3e50;
+          --color-accent: #086554;
+          --color-light: #ffffff;
+          --font-base: 'Poppins', sans-serif;
+          --spacing-sm: 0.5rem;
+          --spacing-md: 1rem;
+          --spacing-lg: 2rem;
+          --border-radius: 8px;
+          --max-width: 1200px;
+        }
+        *, *::before, *::after { box-sizing: border-box; }
         body {
-            line-height: 1.6;
-            font-family: Arial, sans-serif;
-            background-color: #808080;
-            color: #333;
-            margin: 0;
-            padding: 0;
-            font-size: 20px;
+          font-family: var(--font-base);
+          background-color: var(--color-bg);
+          color: var(--color-primary);
+          line-height: 1.6;
+          font-size: 0.9rem;
+          margin: 0;
         }
         header {
-            background: url(https://github.com/CBP1012/JOWO-2025-PHASES/blob/main/Images/Tree_of_the_Knowledge.jpg?raw=true) no-repeat center center;
-            
-            color: white;
-            padding: 60px 20px;
-            text-align: center;
+          position: relative;
+          background: url('https://github.com/CBP1012/JOWO-ONTOLLM/blob/main/Images/Tree_of_the_Knowledge.jpg?raw=true') center/cover no-repeat;
+          height: 30vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          color: var(--color-light);
         }
-        .nav-bar {
-            display: flex;
-            justify-content: center;
-            background: #000105;
-            padding: 15px 0;
+        header::after {
+          content: '';
+          position: absolute;
+          top: 0; left: 0;
+          width: 100%; height: 100%;
+          background: rgba(0,0,0,0.4);
         }
-        .nav-bar a {
-            color: white;
-            text-decoration: none;
-            padding: 14px 20px;
-            margin: 0 10px;
-            font-size: 18px;
-            transition: background 0.3s;
+        header .hero-content {
+          position: relative;
+          z-index: 1;
+          max-width: var(--max-width);
+          padding: var(--spacing-lg);
         }
-        .nav-bar a:hover {
-            background: #2c3e50;
-            border-radius: 5px;
+        header h1 {
+          font-size: 2.5rem;
+          margin-bottom: var(--spacing-sm);
+          font-weight: 600;
         }
-        .container {
-            width: 80%;
-            margin: 30px auto;
-            padding: 20px;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        header p {
+          font-size: 1.1rem;
+          opacity: 0.9;
+          margin-bottom: var(--spacing-sm);
         }
-        .head {
-            margin: 30px auto;
-            padding: 20px;
-            background-color: white;
-            border-radius: 8px;
-            text-align: center;
+        nav {
+          background-color: var(--color-accent);
+          box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .nav-container {
+          max-width: var(--max-width);
+          margin: 0 auto;
+          display: flex;
+          justify-content: center;
+          padding: var(--spacing-sm) 0;
+        }
+        .nav-container a {
+          color: var(--color-light);
+          text-decoration: none;
+          margin: 0 var(--spacing-md);
+          padding: var(--spacing-sm) var(--spacing-lg);
+          border-radius: var(--border-radius);
+          font-weight: 600;
+          transition: background-color 0.3s;
+        }
+        .nav-container a:hover {
+          background-color: rgba(255,255,255,0.2);
+        }
+        main {
+          max-width: var(--max-width);
+          margin: var(--spacing-lg) auto;
+          padding: 0 var(--spacing-md);
+        }
+        section {
+          margin-bottom: var(--spacing-lg);
         }
         .section-title {
-            font-size: 24px;
-            margin-bottom: 15px;
-            color: #2c3e50;
-            border-bottom: 2px solid #2c3e50;
-            padding-bottom: 5px;
+          font-size: 1.8rem;
+          margin-bottom: var(--spacing-sm);
+          position: relative;
+          padding-bottom: var(--spacing-sm);
         }
-        .important-dates, .organizing-committee, .submission-guidelines, .topics-of-interest {
-            margin-bottom: 20px;
+        .section-title::after {
+          content: '';
+          position: absolute;
+          bottom: 0; left: 0;
+          width: 50px;
+          height: 3px;
+          background-color: var(--color-accent);
+          border-radius: var(--border-radius);
         }
-        .important-dates li, .organizing-committee li, .topics-of-interest li {
-            font-size: 20px;
+        .overview p {
+          margin-bottom: var(--spacing-lg);
+          font-weight: 400;
         }
-    </style>
+        .note {
+          font-size: 0.9rem;
+          color: #555;
+          margin-top: var(--spacing-sm);
+        }
+        @media (max-width: 768px) {
+          header h1 { font-size: 2rem; }
+          .nav-container { flex-direction: column; }
+          .nav-container a { margin: var(--spacing-sm) 0; }
+        }
+      </style>
 </head>
 <body>
 
-<header> 
+    <header>
+        <div class="hero-content">
+          <h1>2nd Annual Workshop on LLMs and Ontologies</h1>
+        </div>
+      </header>
 
-</header>
-
-<nav class="nav-bar">
-    <a href="https://cbp1012.github.io/JOWO-ONTOLLM">About</a>
-    <a href="https://cbp1012.github.io/JOWO-ONTOLLM/OrganizingCommittee">Organizing Committee</a>
-    <a href="https://cbp1012.github.io/JOWO-ONTOLLM/Program">Program</a>
-    <a href="https://cbp1012.github.io/JOWO-ONTOLLM/CallForPapers">Call for Papers</a>
-</nav>
+<nav>
+    <div class="nav-container">
+      <a href="https://cbp1012.github.io/JOWO-ONTOLLM/">Call for Papers</a>
+      <a href="https://cbp1012.github.io/JOWO-ONTOLLM/OrganizingCommittee">Organizing Committee</a>
+      <a href="https://cbp1012.github.io/JOWO-ONTOLLM/Program">Program</a>
+    </div>
+  </nav>
 
 <div class="container">
 
     <div class="head">
     <section>
-        <h2>2nd Annual Workshop on the Convergence of Large Language Models and Ontologies</h2>
-        <p><a href="https://www.dmi.unict.it/fois2025/">15th International Conference on Formal Ontology in Information Systems (FOIS 2024)</a></p>
-        <p><a href="https://www.dmi.unict.it/fois2025/?page_id=28">08-12 September 2025 | Catania, Sicily</a></p>
+        <center><h2><a href="https://www.dmi.unict.it/fois2025/?page_id=499">Joint Ontologies Workshop</a></h2></center>
+        <center><h2><a href="https://www.dmi.unict.it/fois2025/">15th International Conference on Formal Ontology in Information Systems (FOIS 2024)</a></h2></center>
+        <center><h2><a href="https://www.dmi.unict.it/fois2025/?page_id=28">08-12 September 2025 | Catania, Sicily</a></h2></center>
     </section>
     </div>
 
     <section>
         <h2 class="section-title">Workshop Overview</h2>
-        <p>The rapid development and deployment of Large-Language Models (LLMs) has led to growing interest in leveraging ontologies and knowledge graphs to enhance LLM capabilities and address limitations. Combining the semantically rich architectures provided by ontologies and knowledge graphs with the generative strengths of LLMs promises to provide a path towards more explainable artificial intelligence systems, more trustworthy output, and a deeper understanding of vulnerabilities arising from integrated architectures. This workshop is dedicated to exploring the convergence of knowledge representation and LLM strategies, design patterns, models, and benchmarks. We aim to bring together researchers, practitioners, and enthusiasts from industry, academia, and government in the interest of exploring possible convergence points and advancing each field.
+        <p>The rapid development and deployment of Large-Language Models (LLMs) has led to growing interest in leveraging ontologies and knowledge graphs to enhance LLM capabilities and address limitations. Combining the semantically rich architectures provided by ontologies and knowledge graphs with the generative strengths of LLMs promises to provide a path towards more explainable artificial intelligence systems, more trustworthy output, and a deeper understanding of vulnerabilities arising from integrated architectures.</p>
+            
+        <p>This workshop is dedicated to exploring the convergence of knowledge representation and LLM strategies, design patterns, models, and benchmarks. We aim to bring together researchers, practitioners, and enthusiasts from industry, academia, and government in the interest of exploring possible convergence points and advancing each field.</p>
 
-            We invite submissions for our workshop focusing on the intersection of Applied Ontology and Large Language Models as part of Joint Ontologies Workshop (JOWO) episode XI, affiliated with FOIS 2025.</p>
-        
-        
-        <h2 class="section-title">Important Dates</h2>
-        <ul>
-            <li>Submission Deadline: 25 May 2025</li>
-            <li>Notification of Acceptance: 14 July 2025</li>
-            <li>Camera-Ready Submissions: 1 September 2025</li>
-            <li>Workshop Date: between 8-9 September 2025</li>
-        </ul>
-        
-        <h2 class="section-title">Contact</h2>
-        <p>For inquiries, email: <a href="mailto:johnbeve@buffalo.edu">johnbeve@buffalo.edu</a></p>
-    </section>
-</body>
-</html>
+        <p>We invite submissions for our workshop focusing on the intersection of Applied Ontology and Large Language Models as part of Joint Ontologies Workshop (JOWO) episode XI, affiliated with FOIS 2025.</p>
+        <div class="container">
+            <h2 class="section-title">Submission Topics</h2>
+                <ul>
+                    <li>Integration of ontological principles in LLM design</li>
+                    <li>Use of LLMs in ontology generation and refinement</li>
+                    <li>Case studies in LLM and ontological approaches</li>
+                    <li>Impact of LLMs on ontology-driven data integration</li>
+                    <li>Challenges in aligning ontological knowledge with LLMs</li>
+                    <li>Role of ontologies in enhancing LLM interpretability and explainability</li>
+                    <li>Advancements in ontology-based natural language understanding</li>
+                    <li>Collaborative ontology building using LLMs</li>
+                    <li>Case studies of LLMs in domain-specific ontology applications</li>
+                    <li>Ethical considerations in the intersection of ontologies and LLMs</li>
+                </ul>
+        </div>
+                <section id="types">
+                    <h2 class="section-title">Paper Types &amp; Guidelines</h2>
+                    <ul>
+                      <li><strong>Abstract (presentation only):</strong> 2–3 pages, 10–15 min presentation (not in proceedings).</li>
+                      <li><strong>Short papers:</strong> 6–8 pages, 10–15 min presentation.</li>
+                      <li><strong>Full papers:</strong> 10–14 pages, 20–25 min presentation.</li>
+                    </ul>
+                    <p class="note">Page count includes references; presentation times include Q&amp;A.</p>
+                  </section>
+                  <section id="formatting">
+                    <h2 class="section-title">Formatting &amp; Submission</h2>
+                    <p>Submit a single PDF via EasyChair using the <a href="https://ceur-ws.org/HOWTOSUBMIT.html#PUBLISH" target="_blank">CEUR 1-column format</a>. Overleaf template <a href="https://www.overleaf.com/latex/templates/template-for-submissions-to-ceur-workshop-proceedings-ceur-ws-dot-org/wqyfdgftmcfw" target="_blank">here</a>.</p>
+                  </section>
+                  <section id="submit">
+                    <h2 class="section-title">Submission Link</h2>
+                    <p>Use the <a href="https://easychair.org/my/conference?conf=fois2025" target="_blank">EasyChair link</a>, select track <em>JOWO Workshop – ONTOLLM</em>.</p>
+                    <p class="note">At least one author must register for JOWO 2025 and attend on-site.</p>
+                  </section>
+                  <div>      
+                    <h2 class="section-title">Important Dates</h2>
+                           <ul>
+                               <li>Submission Deadline: 25 May 2025</li>
+                               <li>Notification of Acceptance: 14 July 2025</li>
+                               <li>Camera-Ready Submissions: 1 September 2025</li>
+                               <li>Workshop Date: between 8-9 September 2025</li>
+                           </ul>
+                           
+                           <h2 class="section-title">Contact</h2>
+                           <p>For inquiries, email: <a href="mailto:johnbeve@buffalo.edu">johnbeve@buffalo.edu</a></p>
+                   </div>
+                 </div>
+                 <h2 class="section-title">Previous JOWO Events</h2>
+                    <ul>
+                        <li><a href="https://ceur-ws.org/Vol-3882/">JOWO 2024</a></li>
+                        <li><a href="https://ceur-ws.org/Vol-3637/">JOWO 2023</a></li>
+                        <li><a href="https://ceur-ws.org/Vol-3249/">JOWO 2022</a></li>
+                        <li><a href="https://ceur-ws.org/Vol-2969/">JOWO 2021</a></li>
+                        <li><a href="https://ceur-ws.org/Vol-2708/">JOWO 2020</a></li>
+                        <li><a href="https://ceur-ws.org/Vol-2518/">JOWO 2019</a></li>
+                        <li><a href="https://ceur-ws.org/Vol-2205/">JOWO 2018</a></li>
+                        <li><a href="https://ceur-ws.org/Vol-2050/">JOWO 2017</a></li>
+                    </ul>
+                </div>
+            <p>Join us in shaping the future of knowledge representation and language understanding by contributing to this cutting-edge workshop</p>

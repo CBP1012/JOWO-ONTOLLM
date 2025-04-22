@@ -1,159 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Faculty List</title>
-    <style>
-        body {
-            line-height: 2;
-            font-family: Arial, sans-serif;
-            background-color: #808080;
-            color: #333;
-            margin: 0;
-            padding: 0;
-            font-size: 25px;
-        }
-        header {
-            background: url(https://github.com/CBP1012/JOWO-2025-PHASES/blob/main/Images/Tree_of_the_Knowledge.jpg?raw=true) no-repeat center center;
-            color: white;
-            padding: 60px 20px;
-            text-align: center;
-        }
-        header h1 {
-            font-size: 36px;
-            margin: 0;
-            background: rgba(0, 0, 0, 0.6);
-            display: inline-block;
-            padding: 10px;
-            border-radius: 10px;
-        }
-        .nav-bar {
-            display: flex;
-            justify-content: center;
-            background: #000105;
-            padding: 15px 0;
-        }
-        .nav-bar a {
-            color: white;
-            text-decoration: none;
-            padding: 14px 20px;
-            margin: 0 10px;
-            font-size: 18px;
-            transition: background 0.3s;
-        }
-        .nav-bar a:hover {
-            background: #2c3e50;
-            border-radius: 5px;
-        }
-        .container {
-            width: 80%;
-            margin: 30px auto;
-            padding: 20px;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-        .head {
-            width: 80%;
-            margin: 30px auto;
-            padding: 20px;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            text-align: center;
-        }
-        .head img {
-            width: 200px; /* Adjust size as needed */
-            height: 200px; /* Make width and height equal */
-            object-fit: cover; /* Ensures the image covers the full area */
-            border-radius: 50%; /* Makes the image circular */
-            display: block;
-            margin: auto;
-        }
-        .head section {
-            gap: 20px; /* Spacing between grid items */
-            align-items: center;
-            justify-content: center;
-        }
-        .head div {
-            text-align: center;
-        }
-        .head a {
-            display: block;
-            color: #2c3e50;
-            font-weight: bold;
-            text-decoration: none;
-        }
-        .head a:hover {
-            text-decoration: underline;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Organizing Committee · ONTOLLM Workshop</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-bg: #f5f7fa;
+      --color-primary: #2c3e50;
+      --color-accent: #086554;
+      --color-light: #ffffff;
+      --font-base: 'Poppins', sans-serif;
+      --spacing-sm: 0.5rem;
+      --spacing-md: 1rem;
+      --spacing-lg: 2rem;
+      --border-radius: 8px;
+      --max-width: 1200px;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      font-family: var(--font-base);
+      background-color: var(--color-bg);
+      color: var(--color-primary);
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      font-size: 0.9rem;
+    }
+    header {
+      position: relative;
+      background: url('https://github.com/CBP1012/JOWO-ONTOLLM/blob/main/Images/Tree_of_the_Knowledge.jpg?raw=true') center/cover no-repeat;
+      height: 30vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: var(--color-light);
+    }
+    header::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.4);
+    }
+    header .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: var(--max-width);
+      padding: var(--spacing-lg);
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin: 0;
+      font-weight: 600;
+    }
+    nav {
+      background-color: var(--color-accent);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .nav-container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      padding: var(--spacing-sm) 0;
+    }
+    .nav-container a {
+      color: var(--color-light);
+      text-decoration: none;
+      margin: 0 var(--spacing-md);
+      padding: var(--spacing-sm) var(--spacing-lg);
+      border-radius: var(--border-radius);
+      font-weight: 600;
+      transition: background-color 0.3s;
+    }
+    .nav-container a:hover {
+      background-color: rgba(255,255,255,0.2);
+    }
+    main {
+      max-width: var(--max-width);
+      margin: var(--spacing-lg) auto;
+      padding: 0 var(--spacing-md);
+    }
+    .section-title {
+      font-size: 1.8rem;
+      margin-bottom: var(--spacing-sm);
+      position: relative;
+      padding-bottom: var(--spacing-sm);
+    }
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0;
+      width: 50px;
+      height: 3px;
+      background-color: var(--color-accent);
+      border-radius: var(--border-radius);
+    }
+    .organizers {
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      justify-content: flex-start;
+      gap: var(--spacing-lg);
+      margin-top: var(--spacing-md);
+      padding-bottom: var(--spacing-sm);
+    }
+    .organizer {
+      flex: 0 0 auto;
+      width: 250px;
+      background: var(--color-light);
+      border-radius: var(--border-radius);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      padding: var(--spacing-md);
+      text-align: center;
+    }
+    .organizer img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: var(--spacing-md);
+    }
+    .organizer a {
+      color: var(--color-accent);
+      text-decoration: none;
+      font-weight: 600;
+      margin-bottom: var(--spacing-sm);
+      display: block;
+    }
+    .organizer p {
+      font-size: 0.9rem;
+      color: #555;
+    }
+    @media (max-width: 768px) {
+      .nav-container { flex-direction: column; }
+      .nav-container a { margin: var(--spacing-sm) 0; }
+      .organizers { justify-content: center; }
+    }
+  </style>
 </head>
-
-<header>
-</header>
-
 <body>
-<nav class="nav-bar">
-    <a href="https://cbp1012.github.io/JOWO-ONTOLLM">About</a>
-    <a href="https://cbp1012.github.io/JOWO-ONTOLLM/OrganizingCommittee">Organizing Committee</a>
-    <a href="https://cbp1012.github.io/JOWO-ONTOLLM/Program">Program</a>
-    <a href="https://cbp1012.github.io/JOWO-ONTOLLM/CallForPapers">Call for Papers</a>
-</nav>
-<div class="head">
-
+  <header>
+    <div class="hero-content">
+      <h1>Organizing Committee</h1>
+    </div>
+  </header>
+  <nav>
+    <div class="nav-container">
+        <a href="https://cbp1012.github.io/JOWO-ONTOLLM/">Call for Papers</a>
+        <a href="https://cbp1012.github.io/JOWO-ONTOLLM/OrganizingCommittee">Organizing Committee</a>
+        <a href="https://cbp1012.github.io/JOWO-ONTOLLM/Program">Program</a>
+      </div>
+  </nav>
+  <main>
     <section>
-        <div>
-            <img src="https://github.com/CBP1012/JOWO-2025-PHASES/blob/main/Images/JB.png?raw=true" alt="John Beverley" loading="lazy">
-            <a href="https://johnbeverley.com/">John Beverley</a> <p>University at Buffalo</p>
+      <h2 class="section-title">Committee Members</h2>
+      <div class="organizers">
+        <div class="organizer">
+          <img src="https://github.com/CBP1012/JOWO-2025-PHASES/blob/main/Images/JB.png?raw=true" alt="John Beverley">
+          <a href="https://johnbeverley.com/">John Beverley<br><small>University at Buffalo</small></a>
+          <p>John Beverley is an Assistant Professor of Philosophy at SUNY Buffalo and Co-Director of the National Center for Ontological Research, leveraging formal logic and knowledge representation to develop ontologies that enhance AI applications in domains from infectious disease to healthy aging.</p>
         </div>
-
-        <div>
-            <p> </p>
+        <div class="organizer">
+          <img src="https://github.com/CBP1012/JOWO-ONTOLLM/blob/main/Images/PeterE.jpg?raw=true" alt="Peter Elkin">
+          <a href="https://medicine.buffalo.edu/faculty/profile.html?ubit=elkinp">Peter Elkin<br><small>University at Buffalo; Chair, Biomedical Informatics</small></a>
+          <p>Peter Elkin, MD, MACP, FACMI, FNYAM, is Distinguished Professor and Chair of the Department of Biomedical Informatics at UB’s Jacobs School of Medicine, renowned for pioneering work in clinical ontology, natural language processing, and health data standards with over 200 peer-reviewed publications.</p>
         </div>
-
-        <div>
-            <img src="https://github.com/CBP1012/JOWO-ONTOLLM/blob/main/Images/PeterE.jpg?raw=true" alt="Peter Elkin" loading="lazy">
-            <a href="https://medicine.buffalo.edu/faculty/profile.html?ubit=elkinp">Peter Elkin</a> <p>University at Buffalo; Chair of the Department of Biomedical Informatics</p>
+        <div class="organizer">
+          <img src="https://github.com/CBP1012/JOWO-ONTOLLM/blob/main/Images/JeremyR.jpg?raw=true" alt="Jeremy Ravenel">
+          <a href="https://www.linkedin.com/in/jeremyravenel/">Jeremy Ravenel<br><small>Naas.ai, Founder &amp; CEO</small></a>
+          <p>Jeremy Ravenel is the Founder &amp; CEO of Naas.ai, a universal open-source data platform empowering users worldwide to democratize data and AI through low-code templates and generative AI integrations.</p>
         </div>
-
-        <div>
-            <p> </p>
+        <div class="organizer">
+            <img src="https://github.com/CBP1012/JOWO-ONTOLLM/blob/main/Images/KenA.jpg?raw=true" alt="Ken Archer">
+            <a href="https://www.kenarcher.org/">Ken Archer<br><small>Microsoft</small></a>
+            <p>Ken Archer is Principal in Responsible AI at Microsoft and a Ph.D. researcher in Philosophy, Cognitive Science &amp; AI at Linköping University, focusing on phenomenology of probability and ethical AI design.</p>
+          </div>
         </div>
-
-
-        <div>
-            <img src="https://github.com/CBP1012/JOWO-ONTOLLM/blob/main/Images/JeremyR.jpg?raw=true" alt="Jeremy Ravenel" loading="lazy">
-            <a href="https://www.linkedin.com/in/jeremyravenel/?originalSubdomain=fr">Jeremey Ravenel</a> <p> Naas.ai; Founder and CEO</pS>
+        <div class="organizer">
+          <img src="https://github.com/CBP1012/JOWO-ONTOLLM/blob/main/Images/Alcides-Lopes-2.png?raw=true" alt="Alcides Lopes">
+          <a href="https://www.researchgate.net/profile/Alcides-Lopes-2">Alcides Lopes<br><small>Universidade Federal do Rio Grande do Sul</small></a>
+          <p>Alcides Lopes a PhD graduate of UFRGS, researching ontology-based information retrieval in the oil and gas domain with interests in semantic-driven AI, knowledge-based systems, and machine learning.</p>
         </div>
-
-        <div>
-            <p> </p>
-        </div>
-
-
-        <div>
-            <img src="https://github.com/CBP1012/JOWO-ONTOLLM/blob/main/Images/Alcides-Lopes-2.png?raw=true" alt="Alcides Lopes" loading="lazy">
-            <a href="https://www.researchgate.net/profile/Alcides-Lopes-2">Alcides Lopes</a> <p>Universidade Federal do Rio Grande do Sul</p>
-        </div>
-
-        <div>
-            <p> </p>
-        </div>
-
-
-        <div>
-            <img src="https://github.com/CBP1012/JOWO-ONTOLLM/blob/main/Images/KenA.jpg?raw=true" alt="Ken Archer" loading="lazy">
-            <a href="https://www.kenarcher.org/">Ken Archer</a> <p>Microsoft</p>
-        </div>
-
-        <div>
-            <p> </p>
-        </div>
-
     </section>
-</div>
-
+  </main>
 </body>
 </html>
