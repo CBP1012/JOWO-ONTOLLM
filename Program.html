@@ -88,9 +88,7 @@
       margin: var(--spacing-lg) auto;
       padding: 0 var(--spacing-md);
     }
-    section {
-      margin-bottom: var(--spacing-lg);
-    }
+    section { margin-bottom: var(--spacing-lg); }
     .section-title {
       font-size: 1.8rem;
       margin-bottom: var(--spacing-sm);
@@ -106,14 +104,53 @@
       background-color: var(--color-accent);
       border-radius: var(--border-radius);
     }
-    .overview p {
-      margin-bottom: var(--spacing-lg);
-      font-weight: 400;
+    .overview p { margin-bottom: var(--spacing-lg); font-weight: 400; }
+    .note { font-size: 0.9rem; color: #555; margin-top: var(--spacing-sm); }
+
+    /* Keynotes */
+    .keynote { background: var(--color-light); border-radius: var(--border-radius); padding: var(--spacing-md); margin-bottom: var(--spacing-md); box-shadow: 0 2px 6px rgba(0,0,0,0.06); }
+    .keynote img { border-radius: 10px; display: inline-block; vertical-align: top; }
+    .keynote h3 { margin: var(--spacing-sm) 0; }
+
+    /* Agenda styling */
+    .agenda-card {
+      background: var(--color-light);
+      border-radius: var(--border-radius);
+      padding: var(--spacing-lg);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
     }
-    .note {
-      font-size: 0.9rem;
-      color: #555;
-      margin-top: var(--spacing-sm);
+    .agenda-meta {
+      margin-bottom: var(--spacing-md);
+      font-weight: 600;
+    }
+    .agenda-line {
+      margin: 0.4rem 0;
+      font-weight: 600;
+    }
+    .session-title {
+      margin: 1rem 0 0.4rem;
+      font-weight: 600;
+    }
+    .agenda-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0.6rem 0 1.2rem;
+      table-layout: fixed;
+    }
+    .agenda-table th, .agenda-table td {
+      border: 1px solid #cfe3ea;
+      padding: 0.6rem 0.8rem;
+      vertical-align: top;
+      word-wrap: break-word;
+    }
+    .agenda-table th {
+      text-align: left;
+      background: #eef6f8;
+      font-weight: 600;
+    }
+    .break {
+      margin: 0.8rem 0;
+      font-weight: 600;
     }
     @media (max-width: 768px) {
       header h1 { font-size: 2rem; }
@@ -139,40 +176,120 @@
   </nav>
 
   <main>
+    <section id="agenda">
+      <h1 class="section-title">Agenda</h1>
+      <div class="agenda-card">
+        <div class="agenda-meta"><center><h2>ONTOLLM Workshop 2025 Agenda</h2></center><center><h3>Co-Located with Explicit and Implicit Knowledge Extraction (EIKE)</h3></center><h2><center>September 9, 2025</center></h2></div>
 
-  <section id="keynotes">
-    <h2 class="section-title">Keynote Speakers</h2>
+        <p class="agenda-line">9:30 | Workshop Begin</p>
 
-    <div class="keynote">
-      <img src="Images/ChrisMungall.png" alt="Chris Mungall" width="200" />
-      <h3>Chris Mungall</h3>
-      <p><strong>Title:</strong> <em>No Agent is an Island: Building Collaborative AI for Ontology Development</em></p>
-      <p><strong>Abstract:</strong> Ontology development is a complex sociotechnological process involving consensus-generation among experts, deep subject matter research, logical representation and reasoning, and rigorous application of engineering principles. It is also highly resource-intensive. So there is naturally interest in applying a variety of AI techniques, from good-old-fashioned AI symbolic methods, to newer large language model (LLM) approaches. After the release of ChatGPT there was an explosion of activity applying LLMs for ontology generation tasks, but these did not translate into meaningful applications in complex domains like the life sciences and biomedicine. This can be explained by a mixture of a lack of trust in generative AI coupled with a misalignment of requirements and capabilities. A newer paradigm of multi-agentic AI offers a more powerful approach that equips the AI with a team of specialists cooperating and using tools to solve complex tasks. For ontology development, these tools include reasoners, literature search tools, ontology exploration and engineering tools, and the ability to communicate through social coding mechanisms such as GitHub. In this talk I will describe experiences in deploying agentic AI systems at scale over a variety of ontology and semantic artefact projects, outlining opportunities and challenges in building, evaluating, and socially integrating agents into ontology development, with a perspective on the future of ontology development in the face of rapid AI developments.</p>
-      <p><strong>Bio:</strong> Dr. Chris Mungall is a Senior Staff Scientist and Head of the Biosystems Data Science Department at Lawrence Berkeley National Laboratory. His work focuses on integrating biological research data through ontologies, knowledge graphs, and machine reasoning to uncover mechanisms underlying human and environmental health. He leads major initiatives including the Gene Ontology, Monarch Initiative, Alliance of Genome Resources, Phenomics First, and the NCATS Biomedical Data Translator, and also serves as metadata lead for the National Microbiome Data Collaborative. Recently, he has expanded his research to explore applications of large language models in biocuration, ontology development, and automated summarization of biological data, including tools like CurateGPT and AI-assisted gene set interpretation.</p>
-    </div>
+        <p class="agenda-line">9:30 – 12:00 | Session 1</p>
+        <table class="agenda-table">
+          <thead>
+            <tr><th style="width:18%">Time</th><th>Title</th><th style="width:35%">Speakers</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>9:30 – 9:40</td>
+              <td>University Initiatives</td>
+              <td>Kemper Lewis</td>
+            </tr>
+            <tr>
+              <td>9:45 – 10:10</td>
+              <td>RAG and Ontologies for Information Retrieval: A Survey</td>
+              <td>Bart Gajderowicz, Aviral Bhardwaj and Mark Fox</td>
+            </tr>
+            <tr>
+              <td>10:15 – 10:40</td>
+              <td>RAG Architecture to Integrate Ontologies and LLMs to Create a Climate Obstruction Portal</td>
+              <td>Michael DeBellis, George Gino, Aadarsh Balaji and Jacob Gino</td>
+            </tr>
+            <tr>
+              <td>10:45 – 11:10</td>
+              <td>Populating a Fuzzy Geothematic Ontology from SDG Ontologies and UNECE Data: A Knowledge Extraction Approach</td>
+              <td>Giuseppe Filippone, Gianmarco La Rosa, and Marco Elio Tabacchi</td>
+            </tr>
+          </tbody>
+        </table>
 
-    <div class="keynote">
-  <img src="Images/risch_headshot.jpeg" alt="Elliott Risch" width="200" />
-  <img src="Images/JamesEgan.png" alt="James Egan" width="200" style="margin-left: 20px;" />
-  <h3>Elliott Risch & James Egan</h3>
-  <p><strong>Title:</strong> <em>A Critique of Pure Vectors: Towards a standards-based ontology solution to the problem of context editing in LLM orchestration frameworks</em></p>
-  <p><strong>Abstract:</strong> If meaning is measured solely by distance between points in vector space, why do the outputs of large language models (LLMs) resist explanation and why do hallucinations persist? Recent advances in LLM orchestration have catalyzed interest in integrating symbolic knowledge structures to enhance retrieval, grounding, and generation of factually consistent outputs. Many of the most popular approaches rely on what we term the Pure Vectors Paradigm (PVP): the use of dense embeddings as the sole medium for semantic representation, retrieval, and judgment. This presentation offers a critique of the PVP and proposes a hybrid architecture where knowledge graphs governed by standards-based ontologies provide a semantic scaffold, alongside embeddings, to anchor meaning, enforce constraints, and provide patterns of judgment for trustworthy, governed, and explainable AI systems.</p>
-  <p><strong>Bio (Elliott Risch):</strong> Elliott is a strategic innovator and influential thought leader specializing in advanced semantic AI solutions. He brings deep expertise in agentic AI workflows, semantic graph architectures, and knowledge-driven technologies. Elliott excels in envisioning, architecting, and deploying scalable, explainable solutions that seamlessly unify structured and unstructured data, delivering transparent, context-rich insights precisely tailored to client needs. His proven track record of guiding strategic adoption and policy alignment for sophisticated GenAI frameworks spans diverse industries such as insurance, pharmaceuticals, automotive, finance, and nonprofit sectors, solidifying his reputation as a trusted advisor and expert consultant. Passionate about leveraging leading semantic standards—including RDF, RDFS, SPARQL, OWL, and SHACL—to develop powerful ontologies supporting deductive semantic inference, Elliott consistently empowers organizations to maximize strategic value, data consistency, and interpretability across their digital infrastructure.</p>
-  <p><strong>Bio (James Egan):</strong> James is an Ontology Consultant dedicated to engineering logically consistent semantic solutions for data management and interoperability. With expertise in data standards and knowledge graph solutions, he has facilitated the design of taxonomies, ontologies, and knowledge graphs for a variety of commercial, academic, and government contexts. James empowers clients to leverage the full potential of their knowledge assets by developing custom solutions to organize and enhance company systems.</p>
-</div>
-    
-  </section>
+        <p class="break">11:10 – 11:30 | Coffee Break</p>
 
-<section id="agenda">
-  <h2 class="section-title">Agenda</h2>
-  <p>Click here to download agenda:</p>
-  <p>
-    <a href="assets/ONTOLLM-Workshop-2025-Agenda.docx" download>
-      Workshop 2025 Agenda
-    </a>
-  </p>
-</section>
+        <p class="agenda-line">11:30 – 1:00 | Session 2</p>
+        <table class="agenda-table">
+          <tbody>
+            <tr>
+              <td style="width:18%">11:30 – 11:55</td>
+              <td>Advanced Planning and Scheduling with Semantic Knowledge Graphs and LLMs</td>
+              <td style="width:35%">Nenad Petrović and Milorad Tosic</td>
+            </tr>
+            <tr>
+              <td>12:00 – 1:00</td>
+              <td><a href="#risch-egan-keynote">Keynote: A Critique of Pure Vectors: Towards a standards-based ontology solution to the problem of context editing in LLM orchestration frameworks</a></td>
+              <td>James Egan and Elliot Risch<br/>Enterprise Knowledge</td>
+            </tr>
+          </tbody>
+        </table>
 
-</main>
+        <p class="break">1:00 – 2:30 | Lunch</p>
+
+        <p class="agenda-line">2:30 – 4:00 | Session 3</p>
+        <table class="agenda-table">
+          <thead>
+            <tr><th style="width:18%">Time</th><th>Title</th><th style="width:35%">Speakers</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2:30 – 2:55</td>
+              <td>Challenges in the Convergence of LLMs and Knowledge Graphs for Air Traffic Information Systems</td>
+              <td>Douglas Silva Teixeira, José Maria Parente de Oliveira and Nauane Linhares do Nascimento</td>
+            </tr>
+            <tr>
+              <td>3:00 – 3:25</td>
+              <td>ADORE: An Agent-Based Architecture for Ontology Evolution from AI-Generated Assertions</td>
+              <td>Marco Monti and Ruslan Idelfonso Magana Vsevolodovna</td>
+            </tr>
+            <tr>
+              <td>3:30 – 3:55</td>
+              <td>Meanings are like Onions: a Layered Approach to Metaphor Processing</td>
+              <td>Silvia Cappa, Anna Sofia Lippolis, and Stefano Zoia</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <table class="agenda-table">
+          <tbody>
+            <tr>
+              <td style="width:18%">4:00 – 5:00</td>
+              <td><a href="#mungall-keynote">Keynote: No Agent is an Island: Building Collaborative AI for Ontology Development</a></td>
+              <td style="width:35%">Chris Mungall, Berkley Labs</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p class="agenda-line">5:00 | Workshop End</p>
+      </div>
+    </section>
+        <section id="keynotes">
+      <h2 class="section-title">Keynote Speakers</h2>
+
+      <div class="keynote" id="mungall-keynote">
+        <img src="Images/ChrisMungall.png" alt="Chris Mungall" width="200" />
+        <h3>Chris Mungall</h3>
+        <p><strong>Title:</strong> <em>No Agent is an Island: Building Collaborative AI for Ontology Development</em></p>
+        <p><strong>Abstract:</strong> Ontology development is a complex sociotechnological process involving consensus-generation among experts, deep subject matter research, logical representation and reasoning, and rigorous application of engineering principles. It is also highly resource-intensive. So there is naturally interest in applying a variety of AI techniques, from good-old-fashioned AI symbolic methods, to newer large language model (LLM) approaches. After the release of ChatGPT there was an explosion of activity applying LLMs for ontology generation tasks, but these did not translate into meaningful applications in complex domains like the life sciences and biomedicine. This can be explained by a mixture of a lack of trust in generative AI coupled with a misalignment of requirements and capabilities. A newer paradigm of multi-agentic AI offers a more powerful approach that equips the AI with a team of specialists cooperating and using tools to solve complex tasks. For ontology development, these tools include reasoners, literature search tools, ontology exploration and engineering tools, and the ability to communicate through social coding mechanisms such as GitHub. In this talk I will describe experiences in deploying agentic AI systems at scale over a variety of ontology and semantic artefact projects, outlining opportunities and challenges in building, evaluating, and socially integrating agents into ontology development, with a perspective on the future of ontology development in the face of rapid AI developments.</p>
+        <p><strong>Bio:</strong> Dr. Chris Mungall is a Senior Staff Scientist and Head of the Biosystems Data Science Department at Lawrence Berkeley National Laboratory. His work focuses on integrating biological research data through ontologies, knowledge graphs, and machine reasoning to uncover mechanisms underlying human and environmental health. He leads major initiatives including the Gene Ontology, Monarch Initiative, Alliance of Genome Resources, Phenomics First, and the NCATS Biomedical Data Translator, and also serves as metadata lead for the National Microbiome Data Collaborative. Recently, he has expanded his research to explore applications of large language models in biocuration, ontology development, and automated summarization of biological data, including tools like CurateGPT and AI-assisted gene set interpretation.</p>
+      </div>
+
+      <div class="keynote" id="risch-egan-keynote">
+        <img src="Images/risch_headshot.jpeg" alt="Elliott Risch" width="200" />
+        <img src="Images/JamesEgan.png" alt="James Egan" width="200" style="margin-left: 20px;" />
+        <h3>Elliott Risch &amp; James Egan</h3>
+        <p><strong>Title:</strong> <em>A Critique of Pure Vectors: Towards a standards-based ontology solution to the problem of context editing in LLM orchestration frameworks</em></p>
+        <p><strong>Abstract:</strong> If meaning is measured solely by distance between points in vector space, why do the outputs of large language models (LLMs) resist explanation and why do hallucinations persist? Recent advances in LLM orchestration have catalyzed interest in integrating symbolic knowledge structures to enhance retrieval, grounding, and generation of factually consistent outputs. Many of the most popular approaches rely on what we term the Pure Vectors Paradigm (PVP): the use of dense embeddings as the sole medium for semantic representation, retrieval, and judgment. This presentation offers a critique of the PVP and proposes a hybrid architecture where knowledge graphs governed by standards-based ontologies provide a semantic scaffold, alongside embeddings, to anchor meaning, enforce constraints, and provide patterns of judgment for trustworthy, governed, and explainable AI systems.</p>
+        <p><strong>Bio (Elliott Risch):</strong> Elliott is a strategic innovator and influential thought leader specializing in advanced semantic AI solutions. He brings deep expertise in agentic AI workflows, semantic graph architectures, and knowledge-driven technologies. Elliott excels in envisioning, architecting, and deploying scalable, explainable solutions that seamlessly unify structured and unstructured data, delivering transparent, context-rich insights precisely tailored to client needs. His proven track record of guiding strategic adoption and policy alignment for sophisticated GenAI frameworks spans diverse industries such as insurance, pharmaceuticals, automotive, finance, and nonprofit sectors, solidifying his reputation as a trusted advisor and expert consultant. Passionate about leveraging leading semantic standards—including RDF, RDFS, SPARQL, OWL, and SHACL—to develop powerful ontologies supporting deductive semantic inference, Elliott consistently empowers organizations to maximize strategic value, data consistency, and interpretability across their digital infrastructure.</p>
+        <p><strong>Bio (James Egan):</strong> James is an Ontology Consultant dedicated to engineering logically consistent semantic solutions for data management and interoperability. With expertise in data standards and knowledge graph solutions, he has facilitated the design of taxonomies, ontologies, and knowledge graphs for a variety of commercial, academic, and government contexts. James empowers clients to leverage the full potential of their knowledge assets by developing custom solutions to organize and enhance company systems.</p>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
